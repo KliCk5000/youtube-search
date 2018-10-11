@@ -1,0 +1,16 @@
+.search-result {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+img {
+  float: left;
+  margin: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
