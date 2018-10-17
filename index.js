@@ -36,7 +36,7 @@ function displayYoutubeSearchData(data) {
 function getDataFromApi(searchTerm, callback) {
   const query = {
     part: `snippet`,
-    key: `AIzaSyBUOKAhKo_sHBhVQ5ZAbBzhUvWNyub9hiM`,
+    key: `AIzaSyAEIMbfKG59ZDmwKq8wOK2xqjXhd3kacL8`,
     q: `${searchTerm}`,
     maxResults: 25,
     type: `video`
@@ -51,11 +51,16 @@ function getDataFromApi(searchTerm, callback) {
 // We will be returning the HTML
 function renderResult(result) {
   return `
-  <div class="search-result clearfix">
-    <img src="${result.snippet.thumbnails.medium.url}" alt="" width="${result.snippet.thumbnails.medium.width}" height="${result.snippet.thumbnails.medium.height}">
-    <h2> <a class="js-result-name" href="${YOUTUBE_BEGINNING_URL}${result.id.videoId}" target="_blank">
-    ${result.snippet.title}</h2> </a>
-    <p>${result.snippet.description}</p>
+  <div class="search-result clearfix row">
+    <div class="col-6">
+    <a href="${YOUTUBE_BEGINNING_URL}${result.id.videoId}" target="_blank"><img src="${result.snippet.thumbnails.medium.url}" alt="" width="${result.snippet.thumbnails.medium.width}" height="${result.snippet.thumbnails.medium.height}"> </a>
+    </div>
+    <div class="col-6">
+      <h2> <a class="js-result-name" href="${YOUTUBE_BEGINNING_URL}${result.id.videoId}" target="_blank">
+      ${result.snippet.title}</h2> </a>
+      <p>${result.snippet.description}</p>
+      <p><a href="https://www.youtube.com/channel/${result.snippet.channelId}" target="_blank">More from this Channel</a></p>
+    </div>
   </div>
   `;
 

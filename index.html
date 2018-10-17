@@ -6,28 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Youtube Search</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/nicks-grid.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
   <meta name="description" content="This is my example of what a Youtube Search would be like">
 </head>
 
 <body>
-  <header role="banner">
-    <h1>Youtube Search</h1>
+  <header role="banner" class="row">
+    <div class="col-12 center">
+      <h1>Youtube Search</h1>
+
+      <form action="#" class="js-search-form">
+        <label for="query">Enter search term</label>
+        <input type="text" class="js-query">
+        <button type="submit">Search</button>
+      </form>
+    </div>
   </header>
-  <section role="region">
-    <form action="#" class="js-search-form">
-      <label for="query">Enter search term</label>
-      <input type="text" class="js-query">
-      <button type="submit">Search</button>
-    </form>
 
-    <h2>Results:</h2>
-    <div class="js-search-results">
-
+  <section role="region" class="row">
+    <div class="col-12 center">
+      <h2>Results:</h2>
+      <div class="js-search-results">    
+        <!-- Youtube search results -->
+      </div>
     </div>
   </section>
-  <footer role="contentinfo">
-    <p>Made by Nick Dean</p>
+
+  <footer role="contentinfo" class="row">
+    <div class="col-12 center">
+      <p>Made by Nick Dean</p>
+    </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

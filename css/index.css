@@ -1,7 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9ebee;
+}
+
 .search-result {
   border: 1px solid black;
   margin: 5px;
   padding: 5px;
+  background-color: white;
 }
 
 img {
@@ -13,4 +22,11 @@ img {
   content: "";
   clear: both;
   display: table;
+}
+
+.center h1,
+.center h2,
+.center p,
+.center form {
+  text-align: center;
 }
