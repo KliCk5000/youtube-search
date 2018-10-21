@@ -6,52 +6,70 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Youtube Search</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="css/nicks-grid.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+	<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" /> -->
+	<link rel="stylesheet" type="text/css" media="screen" href="css/new.css" />
 	<meta name="description" content="This is my example of what a Youtube Search would be like">
 </head>
 
 <body>
-	<header role="banner" class="row">
-		<div class="col-12 center">
-			<h1>Youtube Search</h1>
-
-			<form action="#" class="js-search-form">
-				<label for="query">Enter search term</label>
-				<input type="text" class="js-query">
-				<button type="submit">Search</button>
-			</form>
-
-		</div>
+	<header role="banner">
+		<section class="hero is-info">
+			<div class="hero-body">
+				<div class="container has-text-centered">
+					<h1 class="title">
+						Youtube Search
+					</h1>
+				</div>
+			</div>
+		</section>
 	</header>
 
-	<section role="region" class="row">
-		<div class="col-12 center">
+	<section role="region" class="section center">
+		<form action="#" class="js-search-form">
+			<label class="label">Enter search term:</label>
+			<div class="field has-addons">
+				<div class="control">
+					<input class="input" type="text" placeholder="Funny cat videos" required>
+				</div>
+				<div class="control">
+					<button type="submit" class="button is-link">Search</button>
+				</div>
+			</div>
+		</form>
+	</section>
 
-			<nav role="navigation" class="js-navigate-buttons center">
+	<section role="region" class="section is-paddingless">
+		<div class="container">
+			<nav role="navigation" class="js-navigate-buttons">
 				<!-- Navigation buttons will appear here -->
 			</nav>
+		</div>
+	</section>
 
-			<div class="js-search-results">
-				<!-- Youtube search results -->
-			</div>
+	<section role="region" class="section center">
+		<div class="js-search-results">
+			<!-- Youtube search results -->
+		</div>
+	</section>
 
-      <nav role="navigation" class="js-navigate-buttons center">
+	<section role="region" class="section is-paddingless">
+		<div class="container">
+			<nav role="navigation" class="js-navigate-buttons">
 				<!-- Navigation buttons will also appear here -->
 			</nav>
 		</div>
 	</section>
 
-	<footer role="contentinfo" class="row">
-		<div class="col-12 center">
+	<footer role="contentinfo" class="footer">
+		<div class="content has-text-centered">
 			<p>Made by Nick Dean</p>
 		</div>
 	</footer>
 
 	<div class="modal-container hidden">
 		<div class="modal-content">
-			<button class="close">Close</button>
+
 		</div>
 	</div>
 	<div class="modal-overlay hidden">
