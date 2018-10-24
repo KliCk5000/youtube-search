@@ -1,0 +1,16 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-result {
+  margin: 10px 0;
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

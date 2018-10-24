@@ -62,11 +62,11 @@ function displayYoutubeSearchData(data) {
 // Once results are rendered, we will need a way to navigate them
 function displayNavigationButtons(data) {
   $('.js-navigate-buttons').html(
-    `<div class="row">
-      <ul>
-        <li><a class="js-previous-button">\< Previous</a></li>
-        <li><a class="js-next-button">Next \></a></li>
-      </ul>
+    `<div class="level">
+      <div class="level-item">
+        <a class="js-previous-button pagination-previous">\< Previous</a>
+        <a class="js-next-button pagination-next">Next \></a>
+      </div>
     </div>
     `
   );
@@ -104,16 +104,26 @@ function getNextPageDataFromApi(page, callback) {
 // We will be returning the HTML
 function renderResult(result) {
   return `
-  <div class="search-result clearfix row">
-    <div class="col-6">
-    <a href="${YOUTUBE_BEGINNING_URL}${result.id.videoId}" target="_blank"><img src="${result.snippet.thumbnails.medium.url}" alt=""> </a>
-    </div>
-    <div class="col-6">
-      <h2> <a class="js-result-name" id="${result.id.videoId}" href="#" target="_blank">
-      ${result.snippet.title}</h2> </a>
-      <p>${result.snippet.description}</p>
-      <p><a href="https://www.youtube.com/channel/${result.snippet.channelId}" target="_blank">More from this Channel</a></p>
-    </div>
+  <div class="search-result">
+    <div class="box">
+      <div class="">
+        <div class="card-image">
+          <a href="${YOUTUBE_BEGINNING_URL}${result.id.videoId}" target="_blank"><img src="${result.snippet.thumbnails.medium.url}" alt=""> </a>
+        </div>
+
+        <div class="card-header">
+          <h2> <a class="js-result-name" id="${result.id.videoId}" href="#" target="_blank">${result.snippet.title}</h2> </a>
+        </div>
+
+        <div class="card-content">
+          <p>${result.snippet.description}</p>
+        </div>
+
+        <div class="card-footer">
+          <p><a href="https://www.youtube.com/channel/${result.snippet.channelId}" target="_blank">More from this Channel</a></p>
+        </div>
+      </div>
+    </div
   </div>
   `;
 }
